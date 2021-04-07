@@ -570,11 +570,11 @@
 .product-it-in{
     margin-top: 100px;
     margin: auto;
-    width: 24.7%;
+    width: 25%;
     height: auto;
     margin-top: 20px;
     float: left;
-    margin-right: 3px;
+    
     cursor: pointer;
     border: 1px solid #AAAAAA;
     border-radius: 6px;
@@ -586,6 +586,10 @@
     margin-left: 2.4px;
   
     
+}
+
+#delete-right{
+    margin-right: -2px;
 }
 .product-it-in:hover{
     box-shadow: 1px 2px 20px rgb(212, 212, 212);
