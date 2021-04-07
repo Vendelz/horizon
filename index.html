@@ -7,8 +7,6 @@
         <title>Horizon</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
-    
     
         <link rel="stylesheet" type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -20,6 +18,9 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.bxslider.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     
     
     </head>
@@ -43,11 +44,11 @@
                         <ul class="nav navbar-nav navbar-left">
                 
                             <li><input type="text" placeholder="ค้นหาสินค้า" id="search"><i id="search-icon" class="fas fa-search"></i></li>
-                            <li><a href="home.html" class="active">หน้าแรก</a></li>
+                            <li><a href="index.html" class="active">หน้าแรก</a></li>
                             <li><a href="#">สินค้า</a></li>
                             <li><a href="#">โปรโมชั่น</a></li>
-                            <li><a href="#">จัดเสปค</a></li>
-                            <li><a href="#">ติดต่อเรา</a></li>
+                            <li><a href="feature.html">จัดเสปค</a></li>
+                            <li><a href="contact.html">ติดต่อเรา</a></li>
                             <li><a href="#"></a></li>
                         </ul>
                         <div class="icon-top">
@@ -63,16 +64,81 @@
                
             </nav>
         
-        
-            
-             
-             
+   
         </header>
+        
         <div class="body-web">
+            <section class="slide-wrapper">
+                <div class="carousel owl-carousel">
+            
+    
+                    <div class="card card-1">
+                        <div class="dish-slider">
+                         <img src="image/HORIZON.png" alt="">
+            
+                      
+                        </div><!-- dish-slider -->
+                      </div> <!-- card card-1 -->
+                      
+                      <div class="card card-1">
+                        <div class="dish-slider">
+                         <img src="image/banner4.png" alt="">
+            
+                      
+                        </div><!-- dish-slider -->
+                      </div> <!-- card card-1 -->
+                 
+                      <div class="card card-1">
+                        <div class="dish-slider">
+                         <img src="image/banner3.png" alt="">
+            
+                      
+                        </div><!-- dish-slider -->
+                      </div> <!-- card card-1 -->
+                   
+                        </div>
+            
+              </section> <!-- slide-wrapper -->
+            <script>
+                $(".carousel").owlCarousel({
+                  margin: 20,
+                  loop: true,
+                  autoplay: true,
+                  autoplayTimeout: 2000,
+                  autoplayHoverPause: true,
+                  responsive: {
+                    0:{
+                      items:1,
+                      nav: false
+                    },
+                    600:{
+                      items:1,
+                      nav: false
+                    },
+                    1000:{
+                      items:1,
+                      nav: false
+                    }
+                  }
+                });
+                const buttons = document.querySelectorAll("a");
+              buttons.forEach((button) => {
+                button.onclick = function(e){
+                  let x = e.clientX - e.target.offsetLeft;
+                  let y = e.clientY - e.target.offsetTop;
+                  let ripple = document.createElement("span");
+                  ripple.style.left = `${x}px`;
+                  ripple.style.top = `${y}px`;
+                  this.appendChild(ripple);
+                  setTimeout(function(){
+                    ripple.remove();
+                  }, 600); // 1second = 1000ms
+                }
+              });
+            
+              </script>
             <div class="banner-top">
-                <div id="imgtop1">
-                <img src="image/HORIZON.png" alt="">
-                </div>
+              
                 <img src="image/Banner2.png">
             </div><!-- banner-top -->
     
@@ -156,7 +222,7 @@
                         NVMe M.2 2280 (WDS500G2B0C)</p>
 
                     <p1>Capacity : 500 GB Read Speed/Up to :<br>
-                        2400 MB/s WriteSpeed/Up to : 1750 MB/s</p1><br><br>
+                        2400 MB/s WriteSpeed/Up to : 1750 MB/s</p1><br>
   
                     <div class="insurance">
                         <p2>รับประกัน3ปี <br>
@@ -210,6 +276,7 @@
         
 
             </div><!-- end product -->
+            
                 <div class="menu-moblie" id="menu-moblie-none">
                     <img src="image/menu.png" alt="">
                 </div>
@@ -224,7 +291,7 @@
             <div id="recommend-computer">
                 <div class="head-rc">
                     <div class="head-text" id="text-spec">
-                    <a2>เสปคคอมแนะนำ</a2>
+                    <a2>สเปคคอมแนะนำ</a2>
                     </div>
                     <img src="image/line 1.png" id="img-spec" alt="">    
                     <div class="button">ดูทั้งหมด</div>
@@ -440,7 +507,7 @@
 
                     <div class="product-it-in">
                         <img src="image/p5.png" alt="">
-                        <div class="text-hot-product" id="text-product-in">
+                        <div class="text-hot-product" id="text-product-in"><br>
                             <p>CPU INTEL 1200 CORE I9-10850K
                                 3.6 GHz</p>
         
@@ -472,7 +539,7 @@
                                 B560M AORUS PRO</p>
         
                                 <p1>CORES : 6 THREADS : 6 DISCRETE GRAPHIC
-                                    REQUIRED, NO INTEGRATED GRAPHICS<br></p1>
+                                    REQUIRED, NO INTER<br></p1>
           
                             <div class="insurance">
                                 <p2>รับประกัน3ปี <br>
@@ -493,7 +560,7 @@
                     </div>
 
                     <div class="product-it-in">
-                        <img src="image/p7.png" alt="">
+                        <img src="image/p7.png" id="tablet-cpu-am4" alt="">
                         <div class="text-hot-product" id="text-product-in">
                             <p>CPU AMD AM4 RYZEN5 3600XT 
                                 3.7 GHz</p>
@@ -624,7 +691,7 @@
                     <div class="product-it-in">
                         <img src="image/p12.png" alt="">
                         <div class="text-hot-product" id="text-product-in">
-                            <p>CPU AMD sTRX4 RYZEN THREADRIPPER 3970X</p>
+                            <p>CPU AMD sTRX4 RYZEN THREADRIPPER 3970X</p><br>
         
                                 <p1>CORES : 32 THREADS : 64<br><br></p1>
           

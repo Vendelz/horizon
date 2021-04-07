@@ -2,7 +2,17 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: supermarket;
 }
+@font-face {
+    font-family: supermarket;
+    src: url("/fonts/supermarket.ttf") format("truetype");
+}
+@font-face {
+    font-family: JS Setha;
+    src: url("/fonts/JS\ Setha\ Normal.ttf") format("truetype");
+}
+
 
 #body{
     width: 100%;
@@ -27,19 +37,23 @@
     width: 100%;
     position: absolute;
     top: 18.5px;
-    left: 150px;
+    left: 135px;
 }
 .icon-top{
     width: 100%;
     height: auto;
     margin:auto;
     background: chartreuse;
+  
 }
 #img-right-top{
     float: right;
     margin-top: 8px;
     font-size: 30px;
     width: 4%;
+}
+#img-right-top:hover{
+  cursor: pointer;
 }
 
 .bodyweb{
@@ -67,9 +81,71 @@
     display: none;
 }
 
+.slide-wrapper{
+    width: 100%;
+    margin-bottom: -40px;
+  }
+  .carousel{
+      
+    width: 100%;
+    max-width: 1280px;
+    margin: 52px auto;
+  }
+  .card{
+   width: 100%;
+   max-width: 1280px;
+   height: auto;
+  }
+  
+  .dish-slider{ 
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    
+  }
+  .dish-slider img{ 
+    width: 100%;
+    height: auto;
+  }
+  .dish-slider img:hover{
+    transform: scale(1.03);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+  .dish-sc{
+    background-color: #434343;
+    width: 250px;
+    max-width: 100%;
+    min-height: 250px;
+    margin: 0 auto;
+    border-radius: 100%;
+  }
+  
+  
+  
+  .owl-dots{
+    text-align: center;
+  }
+  .owl-dot{
+    height: 15px;
+    width: 45px;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid #254B7C!important;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .owl-dot.active,
+  .owl-dot:hover{
+    background: #254B7C!important;
+    border: none;
+  }
+  
 
 .banner-top{
-    margin-top: 50px;
+
     width: 100%;
     height: auto;
 }
@@ -155,7 +231,7 @@
     cursor: pointer;
     
 }
-.product-in:hover{
+.product-in:hover {
     box-shadow: 1px 2px 20px rgb(212, 212, 212);
     transform: scale(1.03);
     transition: 0.2s;
@@ -667,7 +743,6 @@
         margin: auto;
     }
     .banner-top{
-        margin-top: 50px;
         width: 100%;
         height: auto;
     }
@@ -1096,9 +1171,9 @@
     }
     
     .product-it-in{
-        margin-top: 100px;
+        padding: 20px;
         margin: auto;
-        width: 32%;
+        width: 31%;
         height: auto;
         margin-top: 20px;
         float: left;
@@ -1107,6 +1182,11 @@
         border: 1px solid #AAAAAA;
         border-radius: 6px;
         padding-bottom: 6px;
+        margin-right: 9px;
+    }
+
+    #tablet-cpu-am4{
+        padding-bottom: 20px;
     }
     
     .product-it-in img{
@@ -1284,7 +1364,6 @@
         margin: auto;
     }
     .banner-top{
-        margin-top: 50px;
         width: 100%;
         height: auto;
     }
